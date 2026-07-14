@@ -1,0 +1,46 @@
+import { HeroLeftBlock } from "./heroSection/HeroLeftBlock";
+import { HeroPhoneBlock } from "./heroSection/HeroPhoneBlock";
+import type { HeroSectionProps } from "@/lib/props/index.props";
+
+export function HeroSection({
+  options,
+}: HeroSectionProps) {
+  return (
+    <section
+      className="relative z-20 w-full bg-[#e8e6e1] overflow-x-clip"
+      aria-label="Hero section"
+    >
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0 opacity-[0.055]"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.6' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E")`,
+          backgroundRepeat: "repeat",
+          backgroundSize:   "100px 100px",
+        }}
+      />
+
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-32 -top-32 z-0 h-[500px] w-[500px] rounded-full bg-emerald-400 opacity-[0.06] blur-3xl"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-24 bottom-16 z-0 h-80 w-80 rounded-full bg-stone-400 opacity-[0.12] blur-2xl"
+      />
+
+      <div className="relative z-10 mx-auto max-w-6xl lg:max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between pt-5 pb-0 min-h-[480px] md:min-h-[580px]">
+
+          <div className="w-full md:w-[42%] pb-8 md:pb-16 z-20">
+            <HeroLeftBlock />
+          </div>
+
+          <div className="w-full md:w-[58%] z-10">
+            <HeroPhoneBlock options={options} />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
