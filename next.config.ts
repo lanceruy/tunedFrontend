@@ -59,7 +59,7 @@ const nextConfig: NextConfig = {
         destination: `${process.env.BACKEND_API_URL || 'http://localhost:5000'}/socket.io/:path*`, 
       },
     ];
-  },
-}; */
+  }, */
+}; 
 
 export default nextConfig;
