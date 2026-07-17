@@ -44,7 +44,7 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: process.env.ALLOWED_DEV_ORIGINS?.split(",") ?? [],
   typedRoutes: true,
 
-  async rewrites() {
+/*  async rewrites() {
     return [
       {
         source: "/api/:path*",
@@ -60,6 +60,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-};
+}; */
 
 export default nextConfig;
